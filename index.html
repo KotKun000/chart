@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Portfolio Website HTML CSS| CodingNepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	
+
+  </head>
+  <body>
+    <div class="scroll-button">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="#">Portfolio.</a></div>
+        
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title"><span>About Me</span></div>
+        <div class="about-details">
+          <div class="left">
+            <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.6435-9/69501935_936267196741514_8917215407807397888_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_eui2=AeHaw6P5710EuK3m597vLVLpAR7lbk-fd1UBHuVuT593VTvn1lCuqFJbWxOxEw_4N-k9UWrfWJ4Cpax864IWBumV&_nc_ohc=de8POgBIZtYAX-EHC_A&_nc_ht=scontent.fbkk10-1.fna&oh=00_AfCA4w2cAIolIKmN2XSWwDa1sUoZiZD2MCY5FuPIWpdn1g&oe=6507113B" alt="" />
+          </div>
+          <div class="right">
+            <div class="topic">แนะนำตัว</div>
+            <p>
+				ผม พูนศักดิ์ กันแก้ว เป็นโปรแกรมเมอร์ผมมีความที่สนใจในการสร้างและพัฒนาซอฟต์แวร์ที่มีประสิทธิภาพและมีคุณภาพสูง ด้วยประสบการณ์ที่ผ่านมาในการทำงานกับภาษาโปรแกรมต่าง ๆ เช่น Python, Java, JavaScript และอื่น ๆ ผม/ดิฉันมีความรู้และความเข้าใจในหลายแนวทางของการพัฒนาซอฟต์แวร์ เช่น การออกแบบฐานข้อมูล, การสร้างเว็บแอปพลิเคชัน, และการพัฒนาแอปพลิเคชันมือถือ
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+	<div class="container">
+        <div class="skill-box">
+            <span class="title">HTML</span>
+            <div class="skill-bar">
+                <span class="skill-per html">
+                    <span class="tooltip">90%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">CSS</span>
+            <div class="skill-bar">
+                <span class="skill-per css">
+                    <span class="tooltip">70%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">JavaScript</span>
+            <div class="skill-bar">
+                <span class="skill-per javascript">
+                    <span class="tooltip">50%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">NodeJS</span>
+            <div class="skill-bar">
+                <span class="skill-per nodejs">
+                    <span class="tooltip">30%</span>
+                </span>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+		<canvas id="myPieChart" width="400" height="400"></canvas>
+	</div>
+	<script>
+		var ctx = document.getElementById('myPieChart').getContext('2d');
+		var myPieChart = new Chart(ctx, {
+		  type: 'pie',
+		  data: {
+			labels: ['HTML', 'CSS', 'JavaScript', 'NodeJS'],
+			datasets: [{
+			  data: [90, 70, 50, 30],
+			  backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
+			  borderWidth: 1
+			}]
+		  },
+		  options: {
+			responsive: true,
+			maintainAspectRatio: false
+		  }
+		});
+	  </script>		
+    <script src="chart.js"></script>
+  </body>
+</html>
